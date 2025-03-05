@@ -104,7 +104,8 @@ include("inc/header.php");
         <div id="success-banner" class="success-banner">Your message has been sent successfully!</div>
             <div class="contact-text">
                 <h3>Fill out your details</h3>
-                <form name="contactForm" onsubmit="return validateForm()">
+                <form name="contactForm" action="inc/process_contact.php" method="POST" onsubmit="return validateForm()">
+
                     <div class="input-row">
                         <div class="input-group">
                             <input type="text" name="firstName" placeholder="First name">
@@ -133,8 +134,7 @@ include("inc/header.php");
                 </form>
             </div>
         </div>
-    </div>
-    
+    </div>   
 
 </section>
 
