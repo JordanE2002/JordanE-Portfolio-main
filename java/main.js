@@ -71,126 +71,78 @@ adjustSidebarVisibility();
 
 
 
+document.forms["contactForm"].onsubmit = function (event) {
+    event.preventDefault(); // Prevent default submission
 
-function validateForm() {
-    // Fetches each field item in contact
     let firstNameField = document.forms["contactForm"]["firstName"];
-    let firstName = firstNameField.value;
+    let firstName = firstNameField.value.trim();
     let lastNameField = document.forms["contactForm"]["lastName"];
-    let lastName = lastNameField.value;
-    let subjectField = document.forms["contactForm"]["subject"];
-    let subject = subjectField.value;
+    let lastName = lastNameField.value.trim();
     let emailField = document.forms["contactForm"]["email"];
-    let email = emailField.value;
+    let email = emailField.value.trim();
+    let subjectField = document.forms["contactForm"]["subject"];
+    let subject = subjectField.value.trim();
     let messageField = document.forms["contactForm"]["message"];
-    let message = messageField.value;
+    let message = messageField.value.trim();
 
+    const nameRegex = /^[A-Za-z]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-//Regex for name and email
-    const nameRegex = /^[A-Za-z]+$/; 
-    const emailRegex = /^[a-zA-Z0-9_+&*-]+(?:\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}$/;
+    let isValid = true;
 
-    let isValid = true; // Flag to check overall form validity
-
-    // Resets any previous error styles
+    // Reset previous styles
     firstNameField.style.border = "";
     lastNameField.style.border = "";
-    subjectField.style.border = "";
     emailField.style.border = "";
+    subjectField.style.border = "";
     messageField.style.border = "";
 
-    // If box completly empty then red border
-    if (firstName === "") {
+    // Validate fields
+    if (firstName === "" || !nameRegex.test(firstName)) {
         firstNameField.style.border = "2px solid red";
         isValid = false;
     }
-
-    if (lastName === "") {
+    if (lastName === "" || !nameRegex.test(lastName)) {
         lastNameField.style.border = "2px solid red";
         isValid = false;
     }
-
-    if (email === "") {
+    if (email === "" || !emailRegex.test(email)) {
         emailField.style.border = "2px solid red";
         isValid = false;
     }
-
     if (subject === "") {
         subjectField.style.border = "2px solid red";
         isValid = false;
     }
-
     if (message === "") {
         messageField.style.border = "2px solid red";
         isValid = false;
     }
 
-    // If boxes have numbers in first name for example a red border
-    if (!nameRegex.test(firstName) && firstName !== "") {
-        firstNameField.style.border = "2px solid red";
-        isValid = false;
-    }
+    // If validation fails, stop submission
+    if (!isValid) return;
 
-  
-    if (!nameRegex.test(lastName) && lastName !== "") {
-        lastNameField.style.border = "2px solid red";
-        isValid = false;
-    }
+    // Prepare form data
+    let formData = new FormData(document.forms["contactForm"]);
 
-    if (!emailRegex.test(email) && email !== "") {
-        emailField.style.border = "2px solid red";
-        isValid = false;
-    }
+    // Send data via AJAX (fetch)
+    fetch("inc/process_contact.php", {
+        method: "POST",
+        body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data.trim() === "success") {
+            // Show success banner
+            const successBanner = document.getElementById("success-banner");
+            successBanner.style.display = "block";
 
-    // Does not submit if any issues
-    if (!isValid) {
-        return false;
-    }
+            // Hide success message after 5 seconds
+            setTimeout(() => successBanner.style.display = "none", 5000);
 
-    // If no errors, you can submit
-    return true;
-}
-
-// Attach the validation to the form's onsubmit event
-document.forms["contactForm"].onsubmit = function (event) {
-    if (!validateForm()) {
-        event.preventDefault();
-    } else {
-        event.preventDefault();
-        alert("Contact form submitted");
-
-        // Clear the fields of text
-        document.forms["contactForm"]["firstName"].value = "";
-        document.forms["contactForm"]["lastName"].value = "";
-        document.forms["contactForm"]["email"].value = "";
-        document.forms["contactForm"]["subject"].value = "";
-        document.forms["contactForm"]["message"].value = "";
-
-        // Makes the red borders normal again
-        document.forms["contactForm"]["firstName"].style.border = "";
-        document.forms["contactForm"]["lastName"].style.border = "";
-        document.forms["contactForm"]["email"].style.border = "";
-        document.forms["contactForm"]["subject"].style.border = "";
-        document.forms["contactForm"]["message"].style.border = "";
-    }
-};
-
-document.forms["contactForm"].onsubmit = function (event) {
-    event.preventDefault(); // Prevents the default form submission
-
-    if (!validateForm()) {
-        return false; // Stops execution if validation fails
-    }
-
-    // Show success banner
-    const successBanner = document.getElementById("success-banner");
-    successBanner.style.display = "block";
-
-    // Hide the banner after 5 seconds
-    setTimeout(function() {
-        successBanner.style.display = 'none';
-    }, 5000);
-
-    // Clear form fields after submission
-    document.forms["contactForm"].reset();
+            // Reset form
+            document.forms["contactForm"].reset();
+        }
+    })
+    .catch(error => console.error("Something went wrong!", error));
 };
