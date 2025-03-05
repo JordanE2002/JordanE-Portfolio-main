@@ -1,0 +1,81 @@
+/* Flexbox container for the case studies */
+.scheme-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Flexbox item styling */
+.scheme-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  background-color: var(--default-white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #a8f0ff;
+}
+
+/* Heading styling */
+.scheme-item h3 {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+/* Paragraph styling */
+.scheme-item p {
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.4px;
+  align-items: center;
+}
+
+/* list styling */
+.scheme-item li {
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.4px;
+  text-align: left;
+}
+
+/* Buttons */
+.scheme-button {
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  color: var(--default-white);
+  background-color: #db8c0d;
+  border: none;
+  font-weight: 400;
+  margin: 10px auto;
+}
+
+/* Grey line */
+.horizontial-line {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px auto;
+  border: none;
+}
+
+/*# sourceMappingURL=scheme.css.map */

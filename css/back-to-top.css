@@ -1,0 +1,42 @@
+/* Styling for back to top button button */
+#back-to-top {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edfbc1;
+  border: solid #edfbc1;
+  border-width: 1px 1px 0 0;
+  border-radius: 0;
+  border-top-right-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Font-related styling */
+#back-to-top a {
+  font-weight: 800;
+  text-transform: capitalize;
+  color: back;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* Hover effect for button */
+#back-to-top:hover {
+  background-color: #BBB193;
+}
+
+@media (max-width: 768px) {
+  #back-to-top {
+    padding: 5px 10px;
+  }
+  #back-to-top a {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=back-to-top.css.map */

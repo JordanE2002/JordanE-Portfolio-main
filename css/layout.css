@@ -1,0 +1,245 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*Genral layout for the body*/
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-centered {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: black;
+}
+
+/* Hide my left sidebar and not shown for a second when having to go*/
+@media (max-width: 768px) {
+  .sidebar {
+    width: auto;
+    position: static;
+  }
+  .sidebar .sidebar-text, .sidebar-present {
+    font-size: 14px;
+    padding: 10px;
+  }
+  /* Make my image take the slider area top*/
+  .banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+  }
+  /* Adjust header text */
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  .header h1 {
+    font-size: 36px;
+  }
+  .header p {
+    font-size: 18px;
+  }
+  /* Males the margin seen left 0 to make the image take that area */
+  #main-content {
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* For the Contact Section */
+  .contact-container {
+    padding: 20px;
+  }
+  .contact-box {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    background-color: #a8f0ff;
+    color: black;
+  }
+  .input-group {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  /* Make the textarea and input fields more responsive */
+  .input-group input,
+  .input-group textarea {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  /* Adjust Button */
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+  /* For Projects Section */
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .projects-item img {
+    width: 100%;
+    height: auto;
+  }
+  /* Adjust header text */
+  .header h1 {
+    font-size: 36px;
+  }
+  .header p {
+    font-size: 18px;
+  }
+  /* Banner image should still take full viewport */
+  .banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* --- Projects  section--- */
+  /*Makes the boxes stacked on smaller screens*/
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*Add limitts for better viewsing */
+  .projects-item {
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  /*Makes images the same ratio and looks the same as the wider screens  */
+  .projects-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  /*Makes the h3 have a smaller title */
+  .projects-item h3 {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+  }
+  /* --- Contact section --- */
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*Just the box decorations */
+  .contact-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background-color: #a8f0ff;
+    color: black;
+  }
+  /* input boxes styles */
+  .input-row {
+    display: flex;
+    flex-direction: column;
+  }
+  /*Space between the fields */
+  .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  /*Boxes layout */
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  /* Textarea details */
+  .input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  /* Button details */
+  button {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+  }
+}
+/*Media query for scheme section*/
+@media (max-width: 768px) {
+  .HTML {
+    background-color: red;
+    width: 100%;
+    height: 200px;
+  }
+  .CSS {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .JAVA {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .PHP {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+/*About me*/
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-item {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+/*Scheme */
+@media (max-width: 768px) {
+  .scheme-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .scheme-item {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */
