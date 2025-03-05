@@ -96,14 +96,12 @@ include("inc/header.php");
 
 
 
-
-
-
 <!-- Contact Section -->
 <section>
     <h1 id="contact" class="title-centered">Contact Form</h1>
     <div class="contact-container">
         <div class="contact-box">
+        <div id="success-banner" class="success-banner">Your message has been sent successfully!</div>
             <div class="contact-text">
                 <h3>Fill out your details</h3>
                 <form name="contactForm" onsubmit="return validateForm()">

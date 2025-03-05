@@ -285,6 +285,26 @@ button:active {
   font-family: "Times New Roman", Times, serif;
 }
 
+.success-banner {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+#success-banner {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+
 /* Flexbox container for the case studies */
 .about-container {
   display: flex;

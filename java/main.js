@@ -174,3 +174,23 @@ document.forms["contactForm"].onsubmit = function (event) {
         document.forms["contactForm"]["message"].style.border = "";
     }
 };
+
+document.forms["contactForm"].onsubmit = function (event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    if (!validateForm()) {
+        return false; // Stops execution if validation fails
+    }
+
+    // Show success banner
+    const successBanner = document.getElementById("success-banner");
+    successBanner.style.display = "block";
+
+    // Hide the banner after 5 seconds
+    setTimeout(function() {
+        successBanner.style.display = 'none';
+    }, 5000);
+
+    // Clear form fields after submission
+    document.forms["contactForm"].reset();
+};
