@@ -1,6 +1,6 @@
 <?php
 // Load Composer's autoloader from the project root
-require_once __DIR__ . '/.';
+require_once __DIR__ . '../vendor/autoload.php';
 
 // Load .env file from the project root
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
