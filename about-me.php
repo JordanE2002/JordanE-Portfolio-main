@@ -14,19 +14,19 @@
     <!-- Sidebar -->
     <nav class="sidebar">
         <div>
-            <a href="index.html" class="sidebar-text">
+            <a href="index.php" class="sidebar-text">
                 <h1>JE <i class="icon-star-full"></i></h1>
             </a>
         </div>
-        <a href="index.html#projects" class="sidebar-text"> My Projects</a>
-        <a href="index.html#contact" class="sidebar-text">Contact Me</a>
+        <a href="index.php#projects" class="sidebar-text"> My Projects</a>
+        <a href="index.php#contact" class="sidebar-text">Contact Me</a>
         <div>
-            <a href="about-me.html#about" class="sidebar-present">About Me</a>
+            <a href="about-me.php#about" class="sidebar-present">About Me</a>
         </div>
         <div>
-            <a href="coding-examples.html#coding-examples" class="sidebar-text">Coding Examples</a>
+            <a href="coding-examples.php#coding-examples" class="sidebar-text">Coding Examples</a>
         </div>
-        <a href="scheme.html#scheme" class="sidebar-text"></i>SCS Scheme</a>
+        <a href="scheme.php#scheme" class="sidebar-text"></i>SCS Scheme</a>
         
 
 
@@ -39,17 +39,11 @@
 </div>
 
     
+<?php
 
-      <!-- Page Content -->
-      <div id="main-content">
-        <!-- Header -->
-        <section id="home" class="header">
-            <div class="header-content">
-                <h1 id="greeting-text"></h1> <!-- This will display "Hello, I am Jordan English." -->
-                <p id="portfolio-text"></p> <!-- This will display "This is my Portfolio." -->
-            </div>
-            <img src="images/sausage-dog.webp" alt="sausage-dog" class="banner-img">
-        </section>
+include("inc/header.php");
+
+?>
 
 
 
@@ -80,19 +74,11 @@
     </section>
 
       <!-- Footer -->
-      <footer class="footer">
+      <?php 
 
+include ("inc/footer.php");
 
-                <p>&copy; Jordan English</p>
-
-                    <!-- Back to top Button -->
-     <div id="back-to-top">
-        <a href="#">
-        Back to top 
-       </a>
-    </div>
-           
-    </footer>
+?>
     <script src="java/main.js"></script>
 
 </body>

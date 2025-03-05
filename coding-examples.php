@@ -13,29 +13,30 @@
     <!-- Sidebar -->
     <nav class="sidebar">
         <div>
-            <a href="index.html" class="sidebar-text">
+            <a href="index.php" class="sidebar-text">
                 <h1>JE <i class="icon-star-full"></i></h1>
             </a>
         </div>
-        <a href="index.html#projects" class="sidebar-text"> My Projects</a>
-        <a href="index.html#contact" class="sidebar-text">Contact Me</a>
+        <a href="index.php#projects" class="sidebar-text"> My Projects</a>
+        <a href="index.php#contact" class="sidebar-text">Contact Me</a>
         <div>
-            <a href="about-me.html#about" class="sidebar-text">About Me</a>
+            <a href="about-me.php#about" class="sidebar-text">About Me</a>
         </div>
         <div>
-            <a href="coding-examples.html#coding-examples" class="sidebar-present">Coding Examples</a>
+            <a href="coding-examples.php#coding-examples" class="sidebar-present">Coding Examples</a>
         </div>
-        <a href="scheme.html#scheme" class="sidebar-text"></i>SCS Scheme</a>
+        <a href="scheme.php#scheme" class="sidebar-text"></i>SCS Scheme</a>
         
 
 
     </nav>
     
 
- <!-- Menu Toggle Button -->
- <div class="menu-toggle">
-    <i class="icon-menu"></i> <!-- Hamburger menu icon -->
-</div>
+    <?php
+
+include("inc/header.php");
+
+?>
 
     
 
@@ -63,20 +64,11 @@
     </section>
 </div>
 
-    <!-- Footer -->
-  <footer class="footer">
+<?php 
 
-        <p>&copy; Jordan English</p>
+include ("inc/footer.php");
 
-        
-    <!-- Back to top Button -->
-    <div id="back-to-top">
-        <a href="#">
-        Back to top 
-       </a>
-    </div>        
-    
-</footer>
+?>
 
 <script src="java/main.js"></script>
 
