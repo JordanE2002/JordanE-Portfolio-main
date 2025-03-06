@@ -13,12 +13,12 @@ function sendEmailToAdmin($firstName, $email, $subject, $message) {
     try {
         // Mailtrap SMTP Configuration
         $mail->isSMTP();
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'b058737485c86e';  
-        $mail->Password = 'ed95b0a3e2221f';  
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Host = $_ENV['MAIL_HOST'];
+        $mail->SMTPAuth = filter_var($_ENV['MAIL_SMTP_AUTH'], FILTER_VALIDATE_BOOLEAN);
+        $mail->Username = $_ENV['MAIL_USERNAME'];
+        $mail->Password = $_ENV['MAIL_PASSWORD'];
+        $mail->SMTPSecure = $_ENV['MAIL_ENCRYPTION'];
+        $mail->Port = $_ENV['MAIL_PORT'];
 
         // Email Details
         $mail->setFrom($email, $firstName); // Use user's email as sender

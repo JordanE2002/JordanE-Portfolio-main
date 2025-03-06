@@ -33,6 +33,11 @@
   margin: 10px 0;
 }
 
+.projects-item p {
+  color: black;
+  margin: 5px;
+}
+
 /* Hover Effect */
 .projects-item:hover {
   transform: translateY(-10px);

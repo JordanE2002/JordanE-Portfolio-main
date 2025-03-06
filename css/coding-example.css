@@ -1,46 +1,53 @@
-/* Box styles for differn't snippets*/
+/* General styles for snippet boxes */
+.HTML, .CSS, .JAVA, .PHP {
+  width: 48%; /* Slightly less than 50% to add spacing */
+  height: 300px; /* Increased height for better structure */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the image doesn't spill out */
+  margin: 1%; /* Adds spacing between boxes */
+  text-align: center;
+}
+
+/* Background colors */
 .HTML {
   background-color: red;
   float: left;
-  width: 50%;
-  height: 200px;
-}
-
-.HTML h3 {
-  text-align: center;
 }
 
 .CSS {
   background-color: yellow;
   float: right;
-  width: 50%;
-  height: 200px;
-}
-
-.CSS h3 {
-  text-align: center;
 }
 
 .JAVA {
   background-color: green;
   float: left;
-  width: 50%;
-  height: 200px;
-}
-
-.JAVA h3 {
-  text-align: center;
 }
 
 .PHP {
   background-color: blue;
   float: right;
-  width: 50%;
-  height: 200px;
 }
 
-.PHP h3 {
-  text-align: center;
+/* Title styling */
+.HTML h3, .CSS h3, .JAVA h3, .PHP h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: white;
+  width: 100%;
+  padding: 5px 0;
+}
+
+/* Image styling */
+.HTML img, .CSS img, .JAVA img, .PHP img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=coding-example.css.map */

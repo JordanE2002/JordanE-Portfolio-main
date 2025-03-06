@@ -53,9 +53,12 @@ include("inc/header.php");
         
         <!-- Project 1 -->
         <div class="projects-item">
-            <a href="https://www.google.co.uk/" target="_blank" class="projects-link"></a>
-            <img src="images/sausage-dog.webp" alt="Project 1">
-            <h3>Project 1: Please view my work</h3>
+            <a href="https://jordan-english.netmatters-scs.co.uk/" target="_blank" class="projects-link"></a>
+            <img src="images/project-1.png" alt="Project 1">
+            <h3>Netmatters hompage: Please view my work</h3>
+            <p><b>Language used: </b>I used HTM/CSS, PHP and Java</p> 
+            <p><b>What it does:</b>It is a clone of te netmatters homepage which ks a task given to me by netmatters themselfs</p>
+            
         </div>
         
         <!-- Project 2 -->
@@ -104,7 +107,7 @@ include("inc/header.php");
         <div id="success-banner" class="success-banner">Your message has been sent successfully!</div>
             <div class="contact-text">
                 <h3>Fill out your details</h3>
-                <form name="contactForm" action="inc/process_contact.php" method="POST" onsubmit="return validateForm()">
+                <form name="contactForm" action="/inc/process_contact.php" method="POST" onsubmit="return validateForm()">
 
                     <div class="input-row">
                         <div class="input-group">

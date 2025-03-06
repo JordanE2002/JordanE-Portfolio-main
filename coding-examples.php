@@ -15,6 +15,7 @@
         <div>
             <a href="index.php" class="sidebar-text">
                 <h1>JE <i class="icon-star-full"></i></h1>
+    
             </a>
         </div>
         <a href="index.php#projects" class="sidebar-text"> My Projects</a>
@@ -47,7 +48,10 @@ include("inc/header.php");
     <section>
         <h1 id="coding-examples" class="title-centered">Code Snippets</h1>
 
-        <div class="HTML"><h3>HTML: TBC</h3></div>
+        <div class="HTML"><h3>HTML: Nav bar for portfolio, whih takes the user to other pages and i used it as it was easy to make/use and fun to play woth to naviage to other pages</h3>
+        <img src="images/HTML-code-example.png" alt="Project 1">
+    </div>
+        
         <div class="CSS"><h3>CSS: TBC</h3></div>
         <div class="JAVA"><h3>JAVA: TBC</h3></div>
         <div class="PHP"><h3>PHP: TBC</h3></div>
