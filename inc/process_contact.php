@@ -1,9 +1,8 @@
 <?php
-// Include database connection
 require_once 'connection.php'; 
+require_once 'mailer.php';  // Include the mailer.php file
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize and validate form inputs
     function sanitize_input($data) {
         return htmlspecialchars(stripslashes(trim($data)));
     }
@@ -14,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = sanitize_input($_POST['subject']);
     $message = sanitize_input($_POST['message']);
 
-    // Validate inputs
     if (empty($first_name) || empty($last_name) || empty($email) || empty($subject) || empty($message)) {
         die("All fields are required!");
     }
@@ -23,14 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid email format!");
     }
 
-    // Insert into the database
     $sql = "INSERT INTO users (first_name, last_name, email, subject, message) VALUES (?, ?, ?, ?, ?)";
     $stmt = $mysqli->prepare($sql);
 
     if ($stmt) {
         $stmt->bind_param("sssss", $first_name, $last_name, $email, $subject, $message);
         if ($stmt->execute()) {
-            echo "success"; // Send success message
+            // Call the function to send the email from mailer.php
+            sendEmailToAdmin($first_name, $email, $subject, $message);
+            echo "success"; // Send success response without showing email details
         } else {
             echo "Database error: " . $stmt->error;
         }

@@ -69,10 +69,8 @@ adjustSidebarVisibility();
 
 
 
-
-
 document.forms["contactForm"].onsubmit = function (event) {
-    event.preventDefault(); // Prevent default submission
+    event.preventDefault(); // Prevent default form submission
 
     let firstNameField = document.forms["contactForm"]["firstName"];
     let firstName = firstNameField.value.trim();
@@ -122,27 +120,32 @@ document.forms["contactForm"].onsubmit = function (event) {
     // If validation fails, stop submission
     if (!isValid) return;
 
-    // Prepare form data
+    // Prepare form data to send
     let formData = new FormData(document.forms["contactForm"]);
 
-    // Send data via AJAX (fetch)
+    // Show success banner immediately
+    const successBanner = document.getElementById("success-banner");
+    successBanner.style.display = "block";
+
+    // Send data via AJAX (fetch) to process_contact.php
     fetch("inc/process_contact.php", {
         method: "POST",
         body: formData,
     })
     .then(response => response.text())
     .then(data => {
+        // Handle success response
         if (data.trim() === "success") {
-            // Show success banner
-            const successBanner = document.getElementById("success-banner");
-            successBanner.style.display = "block";
+            // Reset form after sending
+            document.forms["contactForm"].reset();
 
             // Hide success message after 5 seconds
             setTimeout(() => successBanner.style.display = "none", 5000);
-
-            // Reset form
-            document.forms["contactForm"].reset();
+        } else {
+            console.error("There was an issue processing the form: " + data);
         }
     })
-    .catch(error => console.error("Something went wrong!", error));
+    .catch(error => {
+        console.error("Something went wrong with the form submission:", error);
+    });
 };
