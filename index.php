@@ -57,22 +57,26 @@ include("inc/header.php");
             <img src="images/project-1.png" alt="Project 1">
             <h3>Netmatters hompage: Please view my work</h3>
             <p><b>Language used: </b>I used HTM/CSS, PHP and Java</p> 
-            <p><b>What it does:</b>It is a clone of te netmatters homepage which ks a task given to me by netmatters themselfs</p>
+            <p><b>What it does: </b>It is a clone of the netmatters homepage which is a task given to me by netmatters themselfs</p>
             
         </div>
         
         <!-- Project 2 -->
         <div class="projects-item">
-            <a href="https://www.google.co.uk/" target="_blank" class="projects-link"></a>
-            <img src="images/sausage-dog.webp" alt="Project 2">
-            <h3>Project 2: Please view my work</h3>
+            <a href="http://js-array.jordan-english.netmatters-scs.co.uk/" target="_blank" class="projects-link"></a>
+            <img src="images/JS-array.png" alt="Project 2">
+            <h3>JS Array</h3>
+            <p><b>Language used: </b>I used HTM/CSS, Java, JQuery</p> 
+            <p><b>What it does: </b>It is a image generateor where you put in a email and can save the image. You can use as many images and emails and can delete emails/images</p>
         </div>
         
         <!-- Project 3 -->
         <div class="projects-item">
-            <a href="https://www.google.co.uk/" target="_blank" class="projects-link"></a>
-            <img src="images/Testimg.webp" target="_blank" alt="Project 3">
-            <h3>Project 3: Please view my work</h3>
+            <a href="http://laravel.jordan-english.netmatters-scs.co.uk/login" target="_blank" class="projects-link"></a>
+            <img src="images/Laravel-code.png" target="_blank" alt="Project 3">
+            <h3>Laravel Assigment</h3>
+            <p><b>Language used: </b>Laravel 12 with Bootstrap layout</p> 
+            <p><b>What it does: </b>Is a admin account which manages companies and employees, where i can add/delete/create/edit new companies and employees</p>
         </div>
 
         <div class="projects-item">
