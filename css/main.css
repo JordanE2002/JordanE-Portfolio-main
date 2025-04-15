@@ -359,58 +359,67 @@ button:active {
   height: 100%;
 }
 
-/* General styles for snippet boxes */
-.HTML, .CSS, .JAVA, .PHP {
-  width: 48%; /* Slightly less than 50% to add spacing */
-  height: 300px; /* Increased height for better structure */
+/* Styling for the code snippets section */
+#coding-examples {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+.title-centered {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.code-snippet {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 10px; /* Rounded corners */
-  overflow: hidden; /* Ensures the image doesn't spill out */
-  margin: 1%; /* Adds spacing between boxes */
   text-align: center;
 }
 
-/* Background colors */
-.HTML {
-  background-color: red;
-  float: left;
+.code-snippet h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.CSS {
-  background-color: yellow;
-  float: right;
+.code-snippet p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.JAVA {
-  background-color: green;
-  float: left;
+.code-snippet img {
+  width: 100%; /* Make image width 100% */
+  height: auto; /* Preserve image aspect ratio */
+  max-width: 500px; /* Prevent images from becoming too large */
+  max-height: 60%;
+  border-radius: 8px;
+  object-fit: contain; /* Make sure the image fits within the container */
 }
 
-.PHP {
-  background-color: blue;
-  float: right;
+/* Responsive styling */
+@media (max-width: 768px) {
+  .code-snippet {
+    padding: 15px;
+  }
+  .code-snippet h3 {
+    font-size: 20px;
+  }
+  .code-snippet p {
+    font-size: 14px;
+  }
 }
-
-/* Title styling */
-.HTML h3, .CSS h3, .JAVA h3, .PHP h3 {
-  margin: 10px 0;
-  font-size: 18px;
-  color: white;
-  width: 100%;
-  padding: 5px 0;
-}
-
-/* Image styling */
-.HTML img, .CSS img, .JAVA img, .PHP img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-grow: 1;
-}
-
 /* Flexbox container for the case studies */
 .scheme-container {
   display: flex;
