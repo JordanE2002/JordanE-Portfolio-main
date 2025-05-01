@@ -79,24 +79,7 @@ include("inc/header.php");
             <p><b>What it does: </b>Is a admin account which manages companies and employees, where i can add/delete/create/edit new companies and employees</p>
         </div>
 
-        <div class="projects-item">
-            <a href="https://www.google.co.uk/" target="_blank" class="projects-link"></a>
-            <img src="images/Testimg.webp" alt="Project 3">
-            <h3>Project 4: Please view my work</h3>
-        </div>
-
-        <div class="projects-item">
-            <a href="https://www.google.co.uk/" target="_blank" class="projects-link"></a>
-            <img src="images/Testimg.webp" alt="Project 3">
-            <h3>Project 5: Please view my work</h3>
-        </div>
-
-        <div class="projects-item">
-            <a href="https://www.google.co.uk/" target="_blank" class="projects-link"></a>
-            <img src="images/Testimg.webp" alt="Project 3">
-            <h3>Project 6: Please view my work</h3>
-        </div>
-
+       
     </div>
 </section>
 
