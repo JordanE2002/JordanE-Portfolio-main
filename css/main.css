@@ -151,66 +151,91 @@ section {
   color: white;
 }
 
-/* New styling for the Projects Section */
-/* Projects Container */
+/* === Projects Section (styled like Scheme) === */
+/* Flexbox container for projects */
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  justify-content: space-between; /* Spread the cards evenly */
+  gap: 20px; /* Space between cards */
+  align-items: stretch; /* Ensure the cards are of the same height */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  padding: 20px;
 }
 
-/* Each project item */
+/* Project card styling */
 .projects-item {
-  background-color: #a8f0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  background-color: var(--default-white);
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #a8f0ff;
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative; /* Needed for positioning the link */
-  cursor: pointer; /* Ensures the box appears clickable */
+  cursor: pointer; /* Makes the cards clickable */
 }
 
-/* Styling for the images inside the project item */
-.projects-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Styling for the text inside the project item */
+/* Styling for project card title */
 .projects-item h3 {
-  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
   margin: 10px 0;
 }
 
+/* Styling for project description (text) */
 .projects-item p {
-  color: black;
-  margin: 5px;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin: 5px 0;
+  color: #333;
 }
 
-/* Hover Effect */
+/* Hover effect for project cards */
 .projects-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* anchor tags for the whole box in projects */
-.projects-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-  text-decoration: none;
-  z-index: 1;
+/* Image styling inside projects */
+.projects-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
-.projects-link:hover {
+/* Button styling for "View Project" */
+.projects-button {
+  letter-spacing: 0.4px;
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #db8c0d;
+  border: none;
+  font-weight: 500;
+  margin: 10px auto;
+}
+
+/* Horizontal line between sections */
+.horizontial-line {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px auto;
+  border: none;
 }
 
 .contact-container {
