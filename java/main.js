@@ -1,7 +1,5 @@
-// Wait for the page to load fully before running the code
 document.addEventListener("DOMContentLoaded", () => {
-
-    //Type writer 
+    // Typewriter Effect
     const introText = "Hello, I am Jordan English.";  // Text to type into the <h1>
     const portfolioDesc = "This is my Portfolio.";   // Text to type into the <p>
 
@@ -31,49 +29,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Gets rid of text before starting
+    // Clear existing content before starting
     introElement.textContent = "";
     portfolioElement.textContent = "";
 
     // Start the typewriter effect for <h1>
     typeIntroText();
-
 });
 
+// Sidebar active link handling
 document.addEventListener("DOMContentLoaded", () => {
-    // Get all sidebar links
     const sidebarLinks = document.querySelectorAll('.sidebar .sidebar-text, .sidebar-present');
 
-    // Function to handle adding the active class
+    // Function to handle adding/removing the active class
     function setActiveClass() {
-        // First, remove the 'active' class from all links
         sidebarLinks.forEach(item => item.classList.remove('active'));
-        
-        // Add active class to the clicked link
         this.classList.add('active');
     }
 
-    // Add event listeners to each sidebar link
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', setActiveClass);
-    });
+    // Add event listeners to sidebar links
+    sidebarLinks.forEach(link => link.addEventListener('click', setActiveClass));
 
-    // Handle active class based on current page URL
+    // Set active class based on the current page URL
     const currentPage = window.location.pathname;
-    
     sidebarLinks.forEach(link => {
         if (link.href.includes(currentPage)) {
-            link.classList.add('active');  // Ensure the current page's link is active
+            link.classList.add('active');
         }
     });
 });
-
 
 // Sidebar toggle functionality (for mobile view)
 const toggleButton = document.querySelector('.menu-toggle');
 const sidebarMenu = document.querySelector('.sidebar');
 
-// Function to update sidebar visibility based on screen width
+// Function to adjust sidebar visibility based on screen size
 const adjustSidebarVisibility = () => {
     if (window.innerWidth <= 768) {
         sidebarMenu.classList.add('hidden');  // Hide sidebar on small screens
@@ -90,42 +80,23 @@ toggleButton.addEventListener('click', () => {
 // Update sidebar visibility on window resize
 window.addEventListener('resize', adjustSidebarVisibility);
 
-// Set initial sidebar visibility based on the current window size
+// Initialize sidebar visibility based on the current window size
 adjustSidebarVisibility();
 
-// Navigation bar slider (when clicked on menu toggle)
-document.addEventListener("DOMContentLoaded", function () {
-    // Get all sidebar links (JE, Projects, and Contact)
-    const sidebarLinks = document.querySelectorAll('.sidebar .sidebar-text, .sidebar-present');
-
-    // Get the current page URL
-    const currentPage = window.location.pathname;
-
-    // Loop through all sidebar links
-    sidebarLinks.forEach(link => {
-        // Check if the link's href matches the current page URL
-        if (link.href.includes(currentPage)) {
-            link.classList.add('active'); // Add the active class to the link
-        } else {
-            link.classList.remove('active'); // Remove the active class if it's not the current page
-        }
-    });
-});
-
-
+// Form validation for contact page
 document.forms["contactForm"].onsubmit = function (event) {
     event.preventDefault(); // Prevent default form submission
 
-    let firstNameField = document.forms["contactForm"]["firstName"];
-    let firstName = firstNameField.value.trim();
-    let lastNameField = document.forms["contactForm"]["lastName"];
-    let lastName = lastNameField.value.trim();
-    let emailField = document.forms["contactForm"]["email"];
-    let email = emailField.value.trim();
-    let subjectField = document.forms["contactForm"]["subject"];
-    let subject = subjectField.value.trim();
-    let messageField = document.forms["contactForm"]["message"];
-    let message = messageField.value.trim();
+    const firstNameField = document.forms["contactForm"]["firstName"];
+    const firstName = firstNameField.value.trim();
+    const lastNameField = document.forms["contactForm"]["lastName"];
+    const lastName = lastNameField.value.trim();
+    const emailField = document.forms["contactForm"]["email"];
+    const email = emailField.value.trim();
+    const subjectField = document.forms["contactForm"]["subject"];
+    const subject = subjectField.value.trim();
+    const messageField = document.forms["contactForm"]["message"];
+    const message = messageField.value.trim();
 
     const nameRegex = /^[A-Za-z]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -133,30 +104,28 @@ document.forms["contactForm"].onsubmit = function (event) {
     let isValid = true;
 
     // Reset previous styles
-    firstNameField.style.border = "";
-    lastNameField.style.border = "";
-    emailField.style.border = "";
-    subjectField.style.border = "";
-    messageField.style.border = "";
+    [firstNameField, lastNameField, emailField, subjectField, messageField].forEach(field => {
+        field.style.border = "";
+    });
 
     // Validate fields
-    if (firstName === "" || !nameRegex.test(firstName)) {
+    if (!firstName || !nameRegex.test(firstName)) {
         firstNameField.style.border = "2px solid red";
         isValid = false;
     }
-    if (lastName === "" || !nameRegex.test(lastName)) {
+    if (!lastName || !nameRegex.test(lastName)) {
         lastNameField.style.border = "2px solid red";
         isValid = false;
     }
-    if (email === "" || !emailRegex.test(email)) {
+    if (!email || !emailRegex.test(email)) {
         emailField.style.border = "2px solid red";
         isValid = false;
     }
-    if (subject === "") {
+    if (!subject) {
         subjectField.style.border = "2px solid red";
         isValid = false;
     }
-    if (message === "") {
+    if (!message) {
         messageField.style.border = "2px solid red";
         isValid = false;
     }
@@ -165,7 +134,7 @@ document.forms["contactForm"].onsubmit = function (event) {
     if (!isValid) return;
 
     // Prepare form data to send
-    let formData = new FormData(document.forms["contactForm"]);
+    const formData = new FormData(document.forms["contactForm"]);
 
     // Show success banner immediately
     const successBanner = document.getElementById("success-banner");
@@ -193,6 +162,3 @@ document.forms["contactForm"].onsubmit = function (event) {
         console.error("Something went wrong with the form submission:", error);
     });
 };
-
-
-

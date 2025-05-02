@@ -44,6 +44,11 @@
 </nav>
 
 
+<!-- Menu Toggle Button -->
+<div class="menu-toggle">
+    <i class="icon-menu"></i> <!-- Hamburger menu icon -->
+</div>
+
 <?php include("inc/header.php"); ?>
 
 <!-- Code snippets section -->

@@ -29,6 +29,10 @@
 </nav>
 
 
+ <!-- Menu Toggle Button -->
+ <div class="menu-toggle">
+    <i class="icon-menu"></i> <!-- Hamburger menu icon -->
+</div>
 
     <?php
 

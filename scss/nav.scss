@@ -12,7 +12,7 @@
     transition: transform 0.3s ease, position 0.3s ease; 
 }
 
-/* Sidebar text styling */
+/* Sidebar links */
 .sidebar .sidebar-text {
     display: block;
     padding: 20px;
@@ -37,18 +37,15 @@
 
 .sidebar .sidebar-coding {
     background-color: #6b0504; /* Deep Red */
-
 }
 
 .sidebar .sidebar-scheme {
     background-color: #495867; /* Slate Blue/Grey */
-
 }
 
 /* Hover text styling */
 .sidebar .sidebar-text:hover {
     background-color: #f7c548; /* Golden Yellow */
-
 }
 
 /* Active item styling */
@@ -70,7 +67,6 @@
 
 .sidebar-present:hover {
     background-color: #f7c548; /* Golden Yellow */
- 
 }
 
 /* Menu toggle */
@@ -85,16 +81,9 @@
     cursor: pointer;
 }
 
-/* When the sidebar is hidden, adjust the toggle button */
-.sidebar.hidden .menu-toggle {
-    top: 10px;
-    left: 10px; 
-}
-
-/* Transition effect for the menu toggle */
-.menu-toggle i {
-    font-size: 20px;
-
+/* When the sidebar is hidden, hide the entire sidebar section */
+.sidebar.hidden {
+    display: none;  /* Hide the entire sidebar */
 }
 
 /* Main content area */
@@ -104,13 +93,31 @@
 }
 
 /* When the sidebar is hidden, shift the content to the left */
-.sidebar.hidden, #main-content {
+.sidebar.hidden + #main-content {
     margin-left: 0; 
 }
 
 /* Hide menu toggle on larger screens */
 @media (min-width: 769px) {
     .menu-toggle {
+        display: none;
+    }
+}
+
+/* Hide navigation links when sidebar is collapsed */
+.sidebar.hidden .sidebar-text {
+    display: none;  /* Hide all sidebar links when sidebar is collapsed */
+}
+
+/* Ensure the greeting text stays visible even when sidebar is hidden */
+#greeting-text {
+    display: block;
+}
+
+/* Mobile responsive behavior (hides menu initially on small screens) */
+@media (max-width: 768px) {
+    /* Ensure sidebar is hidden by default on mobile */
+    .sidebar.hidden {
         display: none;
     }
 }
