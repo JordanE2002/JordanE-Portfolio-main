@@ -1,7 +1,7 @@
 /* Sidebar styles */
 .sidebar {
   width: 120px;
-  background-color: #a8f0ff;
+  background-color: #f7c548; /* Muted Mauve */
   color: black;
   position: fixed;
   height: 100%;
@@ -9,13 +9,6 @@
   text-align: center;
   z-index: 1000;
   transform: translateX(0);
-  transition: transform 0.3s ease, position 0.3s ease;
-}
-
-/* Sidebar hidden styles */
-.sidebar.hidden {
-  transform: translateX(-150%);
-  position: absolute;
   transition: transform 0.3s ease, position 0.3s ease;
 }
 
@@ -27,31 +20,53 @@
   text-decoration: none;
   font-size: 18px;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-  border-color: #1E555C;
-  margin-top: 1px;
+}
+
+/* Custom background colors for each sidebar item */
+.sidebar .sidebar-projects {
+  background-color: #8f8389; /* Muted Mauve */
+}
+
+.sidebar .sidebar-contact {
+  background-color: #8f8389; /* Golden Yellow */
+}
+
+.sidebar .sidebar-about {
+  background-color: #7be0ad; /* Mint Green */
+}
+
+.sidebar .sidebar-coding {
+  background-color: #6b0504; /* Deep Red */
+}
+
+.sidebar .sidebar-scheme {
+  background-color: #495867; /* Slate Blue/Grey */
 }
 
 /* Hover text styling */
 .sidebar .sidebar-text:hover {
-  background-color: red;
-  color: white;
+  background-color: #f7c548; /* Golden Yellow */
+}
+
+/* Active item styling */
+.sidebar .sidebar-text.active {
+  background-color: #8f8389; /* Slate Blue/Grey */
+  color: white; /* Text color */
 }
 
 /* Sidebar present styling (for active page) */
 .sidebar-present {
   display: block;
   padding: 20px;
-  color: aquamarine;
-  background-color: gray;
+  color: white;
+  background-color: #8f8389; /* Deep Red */
   text-decoration: none;
   font-size: 18px;
   transition: all 0.3s ease;
 }
 
 .sidebar-present:hover {
-  background-color: red;
-  color: white;
+  background-color: #f7c548; /* Golden Yellow */
 }
 
 /* Menu toggle */
@@ -60,8 +75,7 @@
   top: 10px;
   left: 10px;
   z-index: 1100;
-  background-color: #a8f0ff;
-  border: 1px solid #000;
+  background-color: #8f8389; /* Muted Mauve */
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -76,7 +90,6 @@
 /* Transition effect for the menu toggle */
 .menu-toggle i {
   font-size: 20px;
-  color: black;
 }
 
 /* Main content area */
@@ -90,6 +103,7 @@
   margin-left: 0;
 }
 
+/* Hide menu toggle on larger screens */
 @media (min-width: 769px) {
   .menu-toggle {
     display: none;

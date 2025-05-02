@@ -40,7 +40,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// Nav bar slider
+document.addEventListener("DOMContentLoaded", () => {
+    // Get all sidebar links
+    const sidebarLinks = document.querySelectorAll('.sidebar .sidebar-text, .sidebar-present');
+
+    // Function to handle adding the active class
+    function setActiveClass() {
+        // First, remove the 'active' class from all links
+        sidebarLinks.forEach(item => item.classList.remove('active'));
+        
+        // Add active class to the clicked link
+        this.classList.add('active');
+    }
+
+    // Add event listeners to each sidebar link
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', setActiveClass);
+    });
+
+    // Handle active class based on current page URL
+    const currentPage = window.location.pathname;
+    
+    sidebarLinks.forEach(link => {
+        if (link.href.includes(currentPage)) {
+            link.classList.add('active');  // Ensure the current page's link is active
+        }
+    });
+});
+
+
+// Sidebar toggle functionality (for mobile view)
 const toggleButton = document.querySelector('.menu-toggle');
 const sidebarMenu = document.querySelector('.sidebar');
 
@@ -64,9 +93,24 @@ window.addEventListener('resize', adjustSidebarVisibility);
 // Set initial sidebar visibility based on the current window size
 adjustSidebarVisibility();
 
+// Navigation bar slider (when clicked on menu toggle)
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all sidebar links (JE, Projects, and Contact)
+    const sidebarLinks = document.querySelectorAll('.sidebar .sidebar-text, .sidebar-present');
 
+    // Get the current page URL
+    const currentPage = window.location.pathname;
 
-
+    // Loop through all sidebar links
+    sidebarLinks.forEach(link => {
+        // Check if the link's href matches the current page URL
+        if (link.href.includes(currentPage)) {
+            link.classList.add('active'); // Add the active class to the link
+        } else {
+            link.classList.remove('active'); // Remove the active class if it's not the current page
+        }
+    });
+});
 
 
 document.forms["contactForm"].onsubmit = function (event) {

@@ -8,7 +8,7 @@
   flex-direction: column;
   width: 100%;
   padding: 20px;
-  background-color: green;
+  background-color: #a8f0ff;
   box-sizing: border-box;
 }
 
@@ -28,7 +28,6 @@ input[type=email] {
   width: 100%;
   padding: 10px;
   border: none;
-  font-family: "Times New Roman", Times, serif;
   border-bottom: 1px solid white;
   box-sizing: border-box;
 }
@@ -38,7 +37,6 @@ textarea {
   resize: none;
   padding: 10px;
   border: none;
-  font-family: "Times New Roman", Times, serif;
   border-bottom: 1px solid white;
   box-sizing: border-box;
 }
@@ -72,7 +70,6 @@ button:active {
   color: black;
   font-weight: 600;
   margin-bottom: 30px;
-  font-family: "Times New Roman", Times, serif;
 }
 
 .success-banner {

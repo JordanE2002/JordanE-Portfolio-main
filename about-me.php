@@ -10,27 +10,24 @@
 <body>
   
 
-        
-    <!-- Sidebar -->
-    <nav class="sidebar">
-        <div>
-            <a href="index.php" class="sidebar-text">
-                <h1>JE <i class="icon-star-full"></i></h1>
-            </a>
-        </div>
-        <a href="index.php#projects" class="sidebar-text"> My Projects</a>
-        <a href="index.php#contact" class="sidebar-text">Contact Me</a>
-        <div>
-            <a href="about-me.php#about" class="sidebar-present">About Me</a>
-        </div>
-        <div>
-            <a href="coding-examples.php#coding-examples" class="sidebar-text">Coding Examples</a>
-        </div>
-        <a href="scheme.php#scheme" class="sidebar-text"></i>SCS Scheme</a>
-        
+<nav class="sidebar">
+    <div>
+        <a href="index.php" class="sidebar-present sidebar-je"> <!-- Updated with class sidebar-je -->
+            <h1>JE <i class="icon-star-full"></i></h1>
+        </a>
+    </div>
+    <a href="index.php#projects" class="sidebar-text sidebar-projects">My Projects</a> <!-- Updated with class sidebar-projects -->
+    <a href="index.php#contact" class="sidebar-text sidebar-contact">Contact Me</a> <!-- Updated with class sidebar-contact -->
+    <div>
+        <a href="about-me.php#about" class="sidebar-text sidebar-about">About Me</a>
+    </div>
+    <div>
+        <a href="coding-examples.php#coding-examples" class="sidebar-text sidebar-coding">Coding Examples</a> <!-- Updated with class sidebar-coding -->
+    </div>
+    <a href="scheme.php#scheme" class="sidebar-text sidebar-scheme">SCS Scheme</a> <!-- Updated with class sidebar-scheme -->
+</nav>
 
 
-    </nav>
     
 
  <!-- Menu Toggle Button -->

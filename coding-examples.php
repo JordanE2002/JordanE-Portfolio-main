@@ -25,22 +25,24 @@
 <body>
 
 <!-- Sidebar -->
+
 <nav class="sidebar">
     <div>
-        <a href="index.php" class="sidebar-text">
+        <a href="index.php" class="sidebar-present sidebar-je">
             <h1>JE <i class="icon-star-full"></i></h1>
         </a>
     </div>
-    <a href="index.php#projects" class="sidebar-text">My Projects</a>
-    <a href="index.php#contact" class="sidebar-text">Contact Me</a>
+    <a href="index.php#projects" class="sidebar-text sidebar-projects">My Projects</a>
+    <a href="index.php#contact" class="sidebar-text sidebar-contact">Contact Me</a>
     <div>
-        <a href="about-me.php#about" class="sidebar-text">About Me</a>
+        <a href="about-me.php#about" class="sidebar-text sidebar-about">About Me</a>
     </div>
     <div>
-        <a href="coding-examples.php#coding-examples" class="sidebar-present">Coding Examples</a>
+        <a href="coding-examples.php#coding-examples" class="sidebar-text sidebar-coding">Coding Examples</a>
     </div>
-    <a href="scheme.php#scheme" class="sidebar-text">SCS Scheme</a>
+    <a href="scheme.php#scheme" class="sidebar-text sidebar-scheme">SCS Scheme</a>
 </nav>
+
 
 <?php include("inc/header.php"); ?>
 
