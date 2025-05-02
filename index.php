@@ -27,6 +27,7 @@
         <a href="coding-examples.php#coding-examples" class="sidebar-text sidebar-coding">Coding Examples</a>
     </div>
     <a href="scheme.php#scheme" class="sidebar-text sidebar-scheme">SCS Scheme</a>
+    
 </nav>
     
 

@@ -193,3 +193,6 @@ document.forms["contactForm"].onsubmit = function (event) {
         console.error("Something went wrong with the form submission:", error);
     });
 };
+
+
+
