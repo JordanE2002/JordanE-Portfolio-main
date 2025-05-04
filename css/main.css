@@ -120,6 +120,42 @@
     display: none;
   }
 }
+/* GitHub link styling */
+.sidebar .sidebar-github {
+  background-color: #24292f; /* GitHub's dark background */
+  color: white;
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Pushes it to the bottom of the sidebar */
+}
+
+/* GitHub icon styling */
+.sidebar .sidebar-github i {
+  margin-right: 10px;
+  font-size: 20px; /* Adjust icon size */
+}
+
+/* Hover effect for GitHub link */
+.sidebar .sidebar-github:hover {
+  background-color: #f7c548; /* Golden Yellow */
+}
+
+/* Styling for larger screens */
+@media (min-width: 769px) {
+  .sidebar .sidebar-github {
+    background-color: #24292f; /* GitHub dark color */
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+  }
+  /* GitHub icon styling for larger screens */
+  .sidebar .sidebar-github i {
+    font-size: 24px; /* Larger icon on big screens */
+  }
+}
 /* Keeps everything in line for now */
 #main-content {
   margin-left: 120px;
@@ -357,17 +393,23 @@ button:active {
   display: none;
 }
 
+/* Main content wrapper */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Container for About Me section */
 .about-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
 }
 
+/* Each About Me item box */
 .about-item {
   flex: 1 1 300px;
   background-color: var(--default-white, #fff);
@@ -396,6 +438,7 @@ button:active {
   text-align: justify;
 }
 
+/* Image inside About Me card */
 .about-image {
   width: 100%;
   height: auto;
@@ -403,11 +446,15 @@ button:active {
   object-fit: cover;
 }
 
-/* Styling for the code snippets section */
-#coding-examples {
+/* Reusable main container for consistent layout */
+.main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 40px 20px;
+}
+
+/* Coding Examples Section Styling */
+#coding-examples {
   background-color: #f4f4f4;
   border-radius: 10px;
 }
@@ -444,12 +491,12 @@ button:active {
 }
 
 .code-snippet img {
-  width: 100%; /* Make image width 100% */
-  height: auto; /* Preserve image aspect ratio */
-  max-width: 500px; /* Prevent images from becoming too large */
+  width: 100%;
+  height: auto;
+  max-width: 500px;
   max-height: 60%;
   border-radius: 8px;
-  object-fit: contain; /* Make sure the image fits within the container */
+  object-fit: contain;
 }
 
 /* Responsive styling */

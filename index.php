@@ -27,6 +27,14 @@
         <a href="coding-examples.php#coding-examples" class="sidebar-text sidebar-coding">Coding Examples</a>
     </div>
     <a href="scheme.php#scheme" class="sidebar-text sidebar-scheme">SCS Scheme</a>
+
+
+     <!-- GitHub Link -->
+     <a href="https://github.com/JordanE2002" class="sidebar-text sidebar-github" target="_blank">
+        <i class="icon-github1"></i> GitHub
+    </a>
+
+    
     
 </nav>
     

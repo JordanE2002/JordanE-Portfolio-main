@@ -120,5 +120,41 @@
     display: none;
   }
 }
+/* GitHub link styling */
+.sidebar .sidebar-github {
+  background-color: #24292f; /* GitHub's dark background */
+  color: white;
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Pushes it to the bottom of the sidebar */
+}
+
+/* GitHub icon styling */
+.sidebar .sidebar-github i {
+  margin-right: 10px;
+  font-size: 20px; /* Adjust icon size */
+}
+
+/* Hover effect for GitHub link */
+.sidebar .sidebar-github:hover {
+  background-color: #f7c548; /* Golden Yellow */
+}
+
+/* Styling for larger screens */
+@media (min-width: 769px) {
+  .sidebar .sidebar-github {
+    background-color: #24292f; /* GitHub dark color */
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+  }
+  /* GitHub icon styling for larger screens */
+  .sidebar .sidebar-github i {
+    font-size: 24px; /* Larger icon on big screens */
+  }
+}
 
 /*# sourceMappingURL=nav.css.map */

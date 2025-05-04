@@ -1,8 +1,12 @@
-/* Styling for the code snippets section */
-#coding-examples {
+/* Reusable main container for consistent layout */
+.main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 40px 20px;
+}
+
+/* Coding Examples Section Styling */
+#coding-examples {
   background-color: #f4f4f4;
   border-radius: 10px;
 }
@@ -39,12 +43,12 @@
 }
 
 .code-snippet img {
-  width: 100%; /* Make image width 100% */
-  height: auto; /* Preserve image aspect ratio */
-  max-width: 500px; /* Prevent images from becoming too large */
+  width: 100%;
+  height: auto;
+  max-width: 500px;
   max-height: 60%;
   border-radius: 8px;
-  object-fit: contain; /* Make sure the image fits within the container */
+  object-fit: contain;
 }
 
 /* Responsive styling */
