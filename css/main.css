@@ -446,13 +446,6 @@ button:active {
   object-fit: cover;
 }
 
-/* Reusable main container for consistent layout */
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
 /* Coding Examples Section Styling */
 #coding-examples {
   background-color: #f4f4f4;
