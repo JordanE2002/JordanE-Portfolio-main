@@ -46,10 +46,10 @@ include("inc/header.php");
 
 
     <!-- Code snippets section -->
-    <section id="coding-examples">
+    <section id="coding-examples ">
     <h1 class="title-centered">Code Snippets</h1>
 
-    <div class="code-snippet">
+    <div class="code-snippet container">
         <h3>HTML: Nav bar for portfolio</h3>
         <p>This nav bar allows users to navigate to other pages in the portfolio. I used it because it was easy to make and fun to play with. It is also very useful for going to the other pages without any big issues </p>
     
@@ -60,7 +60,7 @@ include("inc/header.php");
         
     </div>
 
-    <div class="code-snippet">
+    <div class="code-snippet container">
     <h3>CSS: Styling the hero image</h3>
     <p>This CSS code is used to style the layout of the top image on the portfolio page, it sets the image, making it fit by the nav without overflowing so I can have this hero image fit nicely next to the nav bar.</p>
     <!-- Fancybox added for the CSS image -->
@@ -69,7 +69,7 @@ include("inc/header.php");
     </a>
 </div>
 
-<div class="code-snippet">
+<div class="code-snippet container">
     <h3>JavaScript: Image array change image logic</h3>
     <p>This JavaScript code shows that when I press a button for the JS array, it generates a new image using an API to avoid using stored images.</p>
     <!-- Fancybox added for the JavaScript image -->
@@ -79,7 +79,7 @@ include("inc/header.php");
 </div>
 
 
-<div class="code-snippet">
+<div class="code-snippet container">
     <h3>PHP: Contact form handling</h3>
     <p>This contact section displays a form where users can enter their name, email, subject, and message to get in touch. When the user submits the form, it runs a JavaScript validation function to check the inputs. It goes to process_contact.php where it stores my mailtrap details for email storing.</p>
     <!-- Fancybox added for the PHP image -->

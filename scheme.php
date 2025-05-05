@@ -26,6 +26,9 @@
         <a href="coding-examples.php#coding-examples" class="sidebar-text sidebar-coding">Coding Examples</a>
     </div>
     <a href="scheme.php#scheme" class="sidebar-text sidebar-scheme">SCS Scheme</a>
+
+    <a href="https://github.com/yourusername" class="sidebar-text sidebar-github" target="_blank">
+    <i class="icon-github1"></i> GitHub </a>
 </nav>
 
 
@@ -41,10 +44,11 @@ include("inc/header.php");
   
 
 
-    <sction id="scheme">
+    <section id="scheme">
             <h1 class="title-centered">SCS Scheme</h1>
             
-            <div class="scheme-container">
+            <div class="scheme-container container">
+
                 <!-- Scheme box 2 -->
              <div class="scheme-item">
                  <h3>Introduction to Scion Coalition Scheme</h3> 

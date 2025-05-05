@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  max-width: 1500px; /* Set a max width for consistency */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add padding inside the container */
+}
+
 /*Genral layout for the body*/
 body {
   font-family: "Montserrat", sans-serif;
@@ -197,48 +203,6 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 100px;
-  }
-}
-/*Media query for scheme section*/
-@media (max-width: 768px) {
-  .HTML {
-    background-color: red;
-    width: 100%;
-    height: 200px;
-  }
-  .CSS {
-    margin-top: 10px;
-    width: 100%;
-  }
-  .JAVA {
-    margin-top: 10px;
-    width: 100%;
-  }
-  .PHP {
-    margin-top: 10px;
-    width: 100%;
-  }
-}
-/*About me*/
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-item {
-    width: 80%;
-    margin-bottom: 10px;
-  }
-}
-/*Scheme */
-@media (max-width: 768px) {
-  .scheme-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .scheme-item {
-    width: 80%;
-    margin-bottom: 10px;
   }
 }
 

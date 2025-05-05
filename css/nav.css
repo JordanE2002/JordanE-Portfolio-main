@@ -1,7 +1,7 @@
 /* Sidebar styles */
 .sidebar {
   width: 120px;
-  background-color: #f7c548; /* Muted Mauve */
+  background-color: #00CFC1; /* Muted Mauve */
   color: black;
   position: fixed;
   height: 100%;
@@ -40,7 +40,7 @@
 }
 
 .sidebar .sidebar-scheme {
-  background-color: #495867; /* Slate Blue/Grey */
+  background-color: #DB222A; /* Slate Blue/Grey */
 }
 
 /* Hover text styling */

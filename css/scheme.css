@@ -2,12 +2,12 @@
 .scheme-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
   align-items: stretch;
   flex-wrap: wrap;
-  padding: 20px;
 }
 
+/* Global container for consistent width and padding */
 /* Flexbox item styling */
 .scheme-item {
   display: flex;

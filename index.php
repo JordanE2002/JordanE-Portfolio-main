@@ -54,7 +54,7 @@ include("inc/header.php");
 
 <section id="projects">
     <h1 class="title-centered">My Projects</h1>
-    <div class="projects-container">
+    <div class="projects-container container">
         
         <!-- Project 1 -->
         <div class="projects-item">
@@ -104,7 +104,7 @@ include("inc/header.php");
 <!-- Contact Section -->
 <section>
     <h1 id="contact" class="title-centered">Contact Form</h1>
-    <div class="contact-container">
+    <div class="contact-container container">
         <div class="contact-box">
         <div id="success-banner" class="success-banner">Your message has been sent successfully!</div>
             <div class="contact-text">
