@@ -16,13 +16,13 @@
     flex-direction: column;
     justify-content: center;
     width: 30%; 
-    background-color: var(--default-white);  
+    background-color:  #7BE0AD;  
     padding: 15px;  
     border-radius: 8px;  
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #a8f0ff;
+    border: 1px solid   #F7C548;
     overflow: hidden;
     text-align: center;
     cursor: pointer; /* Makes the cards clickable */
@@ -71,8 +71,8 @@
     font-size: 1rem;
     border-radius: 5px;
     color: white;
-    background-color: #db8c0d;
-    border: none;
+    background-color: #6B0504;
+  
     font-weight: 500;
     margin: 10px auto;
 }

@@ -46,7 +46,8 @@ include("inc/header.php");
 
 
     <!-- Code snippets section -->
-    <section id="coding-examples ">
+
+    <section id="coding-examples">
     <h1 class="title-centered">Code Snippets</h1>
 
     <div class="code-snippet container">

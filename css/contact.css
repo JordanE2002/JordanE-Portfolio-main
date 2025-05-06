@@ -8,7 +8,7 @@
   flex-direction: column;
   width: 100%;
   padding: 20px;
-  background-color: #a8f0ff;
+  background-color: #7BE0AD;
   box-sizing: border-box;
 }
 
@@ -25,10 +25,10 @@
 /* Input styles*/
 input[type=text],
 input[type=email] {
+  background-color: #F7C548;
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid white;
   box-sizing: border-box;
 }
 
@@ -37,13 +37,13 @@ textarea {
   resize: none;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid white;
+  background-color: #F7C548;
   box-sizing: border-box;
 }
 
 /* Button styles*/
 button {
-  background: orange;
+  background: #6B0504;
   text-align: center;
   font-weight: bold;
   width: 100px;
@@ -53,6 +53,7 @@ button {
   border-radius: 30px;
   margin-top: 20px;
   align-self: center;
+  color: white;
 }
 
 /* Hover effect */

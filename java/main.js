@@ -50,13 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add event listeners to sidebar links
     sidebarLinks.forEach(link => link.addEventListener('click', setActiveClass));
 
-    // Set active class based on the current page URL
-    const currentPage = window.location.pathname;
-    sidebarLinks.forEach(link => {
-        if (link.href.includes(currentPage)) {
-            link.classList.add('active');
-        }
-    });
+  
+    // Set active class based on pathname AND hash
+const currentPath = window.location.pathname;
+const currentHash = window.location.hash;
+
+sidebarLinks.forEach(link => {
+    const linkURL = new URL(link.href);
+    if (linkURL.pathname === currentPath && linkURL.hash === currentHash) {
+        link.classList.add('active');
+    }
+});
 });
 
 // Sidebar toggle functionality (for mobile view)

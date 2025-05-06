@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     background: transparent; /* Transparent background */
-    border: 2px solid #edfbc1; /* Light border around the button */
+    border: 2px solid  #7BE0AD; /* Light border around the button */
     border-radius: 50%; /* Circular button */
     width: 80px; /* Increased width for larger circle */
     height: 80px; /* Increased height for larger circle */
@@ -31,7 +31,7 @@
 /* Icon-related styling */
 #back-to-top i {
     font-size: 2.5rem; /* Increased icon size */
-    color: #edfbc1; /* Icon color */
+    color:  #F7C548; /* Icon color */
     transition: color 0.3s ease; /* Smooth color change on hover */
 }
 
@@ -39,7 +39,7 @@
 #back-to-top span {
     font-weight: 600;
     text-transform: capitalize;
-    color: #edfbc1; /* Light color for text */
+    color: #6B0504; /* Light color for text */
     font-size: 0.8rem; /* Adjusted text size */
     margin-top: 5px; /* Adds space between the icon and text */
     transition: color 0.3s ease; /* Smooth color change on hover */

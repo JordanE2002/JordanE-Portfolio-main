@@ -1,7 +1,7 @@
 /* Sidebar styles */
 .sidebar {
     width: 120px;
-    background-color: #00CFC1; /* Muted Mauve */
+    background-color: #7BE0AD; /* Muted Mauve */
     color: black;
     position: fixed;
     height: 100%;
@@ -24,34 +24,35 @@
 
 /* Custom background colors for each sidebar item */
 .sidebar .sidebar-projects {
-    background-color: #8f8389; /* Muted Mauve */
+    background-color: #F7C548; /* Muted Mauve */
 }
 
 .sidebar .sidebar-contact {
-    background-color: #8f8389; /* Golden Yellow */
+    background-color: #F7C548; /* Golden Yellow */
 }
 
 .sidebar .sidebar-about {
-    background-color: #7be0ad; /* Mint Green */
+    background-color: #F7C548; /* Mint Green */
 }
 
 .sidebar .sidebar-coding {
-    background-color: #6b0504; /* Deep Red */
+    background-color: #F7C548; /* Deep Red */
 }
 
 .sidebar .sidebar-scheme {
-    background-color: #DB222A; /* Slate Blue/Grey */
+    background-color: #F7C548; /* Slate Blue/Grey */
 }
 
 /* Hover text styling */
 .sidebar .sidebar-text:hover {
-    background-color: #f7c548; /* Golden Yellow */
+    background-color: #6B0504; /* Golden Yellow */
 }
 
 /* Active item styling */
 .sidebar .sidebar-text.active {
-    background-color: #8f8389;  /* Slate Blue/Grey */
-    color: white;  /* Text color */
+  
+    color: black;  /* Text color */
+    background-color: #6B0504;
 }
 
 /* Sidebar present styling (for active page) */
@@ -59,15 +60,16 @@
     display: block;
     padding: 20px;
     color: white;
-    background-color: #8f8389; /* Deep Red */
+    background-color: #F7C548; /* Deep Red */
     text-decoration: none;
     font-size: 18px;
     transition: all 0.3s ease;
 }
 
 .sidebar-present:hover {
-    background-color: #f7c548; /* Golden Yellow */
+    background-color: #6B0504; /* Golden Yellow */
 }
+
 
 /* Menu toggle */
 .menu-toggle {
