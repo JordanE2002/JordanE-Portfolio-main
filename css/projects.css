@@ -15,13 +15,13 @@
   flex-direction: column;
   justify-content: center;
   width: 30%;
-  background-color: #7BE0AD;
+  background-color: #1b263b;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #F7C548;
+  border: 1px solid #778da9;
   overflow: hidden;
   text-align: center;
   cursor: pointer; /* Makes the cards clickable */
@@ -33,6 +33,7 @@
   font-size: 1.8rem;
   line-height: 2.2rem;
   margin: 10px 0;
+  color: #e0e1dd !important;
 }
 
 /* Styling for project description (text) */
@@ -41,7 +42,7 @@
   font-size: 0.9rem;
   line-height: 1.4rem;
   margin: 5px 0;
-  color: #333;
+  color: #e0e1dd;
 }
 
 /* Hover effect for project cards */
@@ -60,26 +61,39 @@
 
 /* Button styling for "View Project" */
 .projects-button {
+  background-color: #778da9;
+  color: #e0e1dd;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
   letter-spacing: 0.4px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
   display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  padding: 8px 15px;
-  text-transform: uppercase;
-  font-size: 1rem;
-  border-radius: 5px;
-  color: white;
-  background-color: #6B0504;
-  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   margin: 10px auto;
+}
+
+/* Hover Effect */
+.projects-button:hover {
+  background-color: #415a77;
+  transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.projects-button:active {
+  background-color: #0d1b2a;
 }
 
 /* Horizontal line between sections */
 .horizontial-line {
   width: 80%;
   height: 1px;
-  background-color: #ddd;
+  background-color: #e0e1dd;
   margin: 15px auto;
   border: none;
 }

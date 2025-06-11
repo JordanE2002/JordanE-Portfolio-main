@@ -37,9 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     typeIntroText();
 });
 
+
+
 // Sidebar active link handling
 document.addEventListener("DOMContentLoaded", () => {
     const sidebarLinks = document.querySelectorAll('.sidebar .sidebar-text, .sidebar-present');
+    const sidebarMenu = document.querySelector('.sidebar');  // Moved inside for scope clarity
 
     // Function to handle adding/removing the active class
     function setActiveClass() {
@@ -47,20 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
         this.classList.add('active');
     }
 
-    // Add event listeners to sidebar links
+    // Add event listeners to sidebar links for active state
     sidebarLinks.forEach(link => link.addEventListener('click', setActiveClass));
 
-  
-    // Set active class based on pathname AND hash
-const currentPath = window.location.pathname;
-const currentHash = window.location.hash;
+    // Set active class based on current URL pathname and hash
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
 
-sidebarLinks.forEach(link => {
-    const linkURL = new URL(link.href);
-    if (linkURL.pathname === currentPath && linkURL.hash === currentHash) {
-        link.classList.add('active');
-    }
-});
+    sidebarLinks.forEach(link => {
+        const linkURL = new URL(link.href);
+        if (linkURL.pathname === currentPath && linkURL.hash === currentHash) {
+            link.classList.add('active');
+        }
+    });
+
+    // Close sidebar when a sidebar link is clicked on mobile
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                sidebarMenu.classList.add('hidden'); // hide sidebar on mobile after clicking
+            }
+        });
+    });
 });
 
 // Sidebar toggle functionality (for mobile view)
@@ -70,7 +81,7 @@ const sidebarMenu = document.querySelector('.sidebar');
 // Function to adjust sidebar visibility based on screen size
 const adjustSidebarVisibility = () => {
     if (window.innerWidth <= 768) {
-        sidebarMenu.classList.add('hidden');  // Hide sidebar on small screens
+        sidebarMenu.classList.add('hidden');  // Hide sidebar on small screens by default
     } else {
         sidebarMenu.classList.remove('hidden');  // Show sidebar on larger screens
     }
@@ -86,6 +97,11 @@ window.addEventListener('resize', adjustSidebarVisibility);
 
 // Initialize sidebar visibility based on the current window size
 adjustSidebarVisibility();
+
+
+
+
+
 
 // Form validation for contact page
 document.forms["contactForm"].onsubmit = function (event) {

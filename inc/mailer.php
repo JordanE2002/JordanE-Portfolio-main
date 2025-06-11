@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php'; // Load PHPMailer
 
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -22,7 +23,7 @@ function sendEmailToAdmin($firstName, $email, $subject, $message) {
 
         // Email Details
         $mail->setFrom($email, $firstName); // Use user's email as sender
-        $mail->addAddress('your-email@example.com', 'Your Name'); // Change to your email
+        $mail->addAddress('je@gmail.com', 'Your Name'); // Change to your email
         $mail->addReplyTo($email, $firstName); // Ensure replies go to the user
 
         // Email Content

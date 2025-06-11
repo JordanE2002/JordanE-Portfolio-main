@@ -1,8 +1,7 @@
 /* Sidebar styles */
 .sidebar {
     width: 120px;
-    background-color: #7BE0AD; /* Muted Mauve */
-    color: black;
+    background-color: #0d1b2a;
     position: fixed;
     height: 100%;
     padding-top: 20px;
@@ -16,58 +15,66 @@
 .sidebar .sidebar-text {
     display: block;
     padding: 20px;
-    color: black;
+    color: #e0e1dd;
     text-decoration: none;
     font-size: 18px;
     transition: all 0.3s ease;
 }
 
+
 /* Custom background colors for each sidebar item */
 .sidebar .sidebar-projects {
-    background-color: #F7C548; /* Muted Mauve */
+    background-color: #1b263b; 
+}
+.sidebar .sidebar-projects {
+    background-color: #1b263b; 
 }
 
 .sidebar .sidebar-contact {
-    background-color: #F7C548; /* Golden Yellow */
+    background-color: #1b263b; 
 }
 
 .sidebar .sidebar-about {
-    background-color: #F7C548; /* Mint Green */
+    background-color: #1b263b; 
 }
 
 .sidebar .sidebar-coding {
-    background-color: #F7C548; /* Deep Red */
+    background-color: #1b263b; 
 }
 
 .sidebar .sidebar-scheme {
-    background-color: #F7C548; /* Slate Blue/Grey */
+    background-color: #1b263b; 
 }
 
 /* Hover text styling */
 .sidebar .sidebar-text:hover {
-    background-color: #6B0504; /* Golden Yellow */
+    background-color:  #415a77; 
 }
 
 /* Active item styling */
 .sidebar .sidebar-text.active {
   
-    color: black;  /* Text color */
-    background-color: #6B0504;
+    color: #e0e1dd; 
+    background-color: #778da9;
+  
+   
 }
 
 /* Sidebar present styling (for active page) */
 .sidebar-present {
     display: block;
     padding: 20px;
-    color: white;
-    background-color: #F7C548; /* Deep Red */
+    color: #e0e1dd;
+    background-color: #1b263b; 
     text-decoration: none;
     font-size: 18px;
     transition: all 0.3s ease;
+    
 }
 
 .sidebar-present:hover {
-    background-color: #6B0504; /* Golden Yellow */
+    background-color: #415a77; 
+
 }
 
 
@@ -76,11 +83,12 @@
     position: absolute;
     top: 10px;
     left: 10px; 
-    z-index: 1100;
-    background-color: #8f8389; /* Muted Mauve */
+    z-index: 1111111111111111111111111100 !important;
+    background-color: #778da9; 
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
 }
 
 /* When the sidebar is hidden, hide the entire sidebar section */
@@ -144,7 +152,7 @@
 
 /* Hover effect for GitHub link */
 .sidebar .sidebar-github:hover {
-    background-color: #f7c548; /* Golden Yellow */
+    background-color: #415a77; /* Golden Yellow */
 }
 
 /* Styling for larger screens */
@@ -160,4 +168,24 @@
     .sidebar .sidebar-github i {
         font-size: 24px; /* Larger icon on big screens */
     }
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 2000; /* higher than sidebar */
+    }
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: sticky!important;
+    top: 1px !important;        /* Push sidebar down below menu toggle */
+    height: calc(100% - 50px) !important;  /* Adjust height */
+    padding-top: 0 !important;   /* Remove original padding to avoid double space */
+  }
 }

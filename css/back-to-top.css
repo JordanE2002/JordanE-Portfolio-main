@@ -1,79 +1,75 @@
-/* Remove the underline from the <a> tag */
+/* Remove underline and align contents */
 #back-to-top a {
-  text-decoration: none; /* Removes the underline */
+  text-decoration: none;
   display: flex;
-  flex-direction: column; /* Aligns the icon and text vertically */
-  align-items: center; /* Centers them horizontally */
-  justify-content: center; /* Centers the content vertically */
-  height: 100%; /* Ensures the anchor tag takes up the full height of the circle */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-/* Styling for back to top button */
+/* Button styling */
 #back-to-top {
   position: fixed;
-  bottom: 20px; /* Adjusted to make the button a little higher */
-  right: 20px; /* Positioned on the right side of the page */
-  z-index: 9999;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent; /* Transparent background */
-  border: 2px solid #7BE0AD; /* Light border around the button */
-  border-radius: 50%; /* Circular button */
-  width: 80px; /* Increased width for larger circle */
-  height: 80px; /* Increased height for larger circle */
-  padding: 0; /* Remove internal padding, size is defined by width and height */
+  flex-direction: column;
+  background-color: #1b263b;
+  border: none;
+  border-radius: 8px;
+  width: 70px;
+  height: 80px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth hover transition */
-  overflow: hidden; /* Ensures the content doesn't overflow the circle */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  padding: 8px;
 }
 
-/* Icon-related styling */
+/* Icon */
 #back-to-top i {
-  font-size: 2.5rem; /* Increased icon size */
-  color: #F7C548; /* Icon color */
-  transition: color 0.3s ease; /* Smooth color change on hover */
+  font-size: 2rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-/* Text styling below the icon */
+/* Label text */
 #back-to-top span {
-  font-weight: 600;
-  text-transform: capitalize;
-  color: #6B0504; /* Light color for text */
-  font-size: 0.8rem; /* Adjusted text size */
-  margin-top: 5px; /* Adds space between the icon and text */
-  transition: color 0.3s ease; /* Smooth color change on hover */
-  text-align: center; /* Centers the text */
-  max-width: 60px; /* Ensures the text does not overflow the circle */
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 0.75rem;
+  margin-top: 5px;
+  text-align: center;
+  max-width: 60px;
+  line-height: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Improves readability */
 }
 
-/* Hover effect for button */
+/* Hover effect */
 #back-to-top:hover {
-  background-color: #edfbc1; /* Background color on hover */
-  border-color: #BBB193; /* Change border color when hovered */
+  background-color: #778da9;
 }
 
-/* Hover effect for the icon when hovering over the whole button */
-#back-to-top:hover i {
-  color: black; /* Icon color turns black when button is hovered */
-}
-
-/* Hover effect for the text when hovering over the whole button */
+#back-to-top:hover i,
 #back-to-top:hover span {
-  color: black; /* Text color changes to black when hovered */
+  color: white;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive */
 @media (max-width: 768px) {
   #back-to-top {
-    width: 70px; /* Slightly smaller button on mobile */
-    height: 70px; /* Maintain aspect ratio */
+    width: 60px;
+    height: 70px;
   }
   #back-to-top i {
-    font-size: 2rem; /* Slightly smaller icon size for mobile */
+    font-size: 1.8rem;
   }
   #back-to-top span {
-    font-size: 0.8rem; /* Smaller text on mobile */
+    font-size: 0.7rem;
   }
 }
 

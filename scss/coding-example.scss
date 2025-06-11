@@ -2,22 +2,17 @@
 #coding-examples {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px;
-    background-color:  #7BE0AD;
-    border-radius: 10px;
+    padding: 0px;
+    background-color:  #0d1b2a;
+     border-radius: 0;
 }
 
-.title-centered {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
 
 .code-snippet {
-    background-color:  #F7C548;
+    background-color:   #1b263b;
     padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
+    margin-bottom: 30px !important;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -26,14 +21,15 @@
 }
 
 .code-snippet h3 {
+    
     font-size: 24px;
-    color:  #6B0504;
+    color:  #e0e1dd;
     margin-bottom: 15px;
 }
 
 .code-snippet p {
     font-size: 16px;
-    color:  #6B0504;
+    color:  #e0e1dd;
     margin-bottom: 20px;
     line-height: 1.5;
 }

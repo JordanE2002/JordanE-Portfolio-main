@@ -10,8 +10,7 @@
 <body>
 
     
-  <!-- Sidebar -->
-  <nav class="sidebar">
+<nav class="sidebar">
     <div>
         <a href="index.php" class="sidebar-present sidebar-je">
             <h1>JE <i class="icon-star-full"></i></h1>
@@ -26,10 +25,16 @@
         <a href="coding-examples.php#coding-examples" class="sidebar-text sidebar-coding">Coding Examples</a>
     </div>
     <a href="scheme.php#scheme" class="sidebar-text sidebar-scheme">SCS Scheme</a>
-
     <a href="https://github.com/yourusername" class="sidebar-text sidebar-github" target="_blank">
-    <i class="icon-github1"></i> GitHub </a>
+        <i class="icon-github1"></i> GitHub
+    </a>
 </nav>
+
+
+ <!-- Menu Toggle Button -->
+ <div class="menu-toggle">
+    <i class="icon-menu"></i> <!-- Hamburger menu icon -->
+</div>
 
 
 

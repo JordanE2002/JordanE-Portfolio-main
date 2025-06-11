@@ -8,7 +8,7 @@
     flex-direction: column;
     width: 100%;
     padding: 20px;
-    background-color: #7BE0AD;
+    background-color: #1b263b !important;
     box-sizing: border-box;
 }
 
@@ -25,13 +25,17 @@
 /* Input styles*/
 input[type="text"], 
 input[type="email"] 
-{   background-color:  #F7C548;
+{   background-color:  #415a77;
     width: 100%;
     padding: 10px;
     border: none;
-   
     box-sizing: border-box;
 }
+
+input::placeholder{
+    color: #e0e1dd;
+}
+
 
 
 textarea {
@@ -39,39 +43,47 @@ textarea {
     resize: none;
     padding: 10px;
     border: none;
-    background-color:  #F7C548;
- 
+    background-color:  #415a77;
+     
     box-sizing: border-box;
 }
 
+textarea::placeholder {
+    color: #e0e1dd;
+}
 /* Button styles*/
 button {
-    background: #6B0504;
-    text-align: center;
-    font-weight: bold;
-    width: 100px;
+    color: #e0e1dd;
+    background-color: #778da9;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 8px 15px;
     border: none;
-    outline: none;
-    height: 35px;
-    border-radius: 30px;
-    margin-top: 20px;
-    align-self: center;
-    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px auto;
 }
 
 /* Hover effect */
 button:hover {
-    cursor: pointer;
+    background-color: #415a77;
+    transform: translateY(-2px);
 }
 
 /* Button style when clicked */
 button:active {
-    background-color: aquamarine;
+    background-color: #0d1b2a;
 }
 
 /* Contact text styling */
 .contact-text h3 {
-    color: black;
+    color: #e0e1dd;
     font-weight: 600;
     margin-bottom: 30px;
 

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid email format!");
     }
 
-    $sql = "INSERT INTO users (first_name, last_name, email, subject, message) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO users (firstName, lastName, email, subject, message) VALUES (?, ?, ?, ?, ?)";
     $stmt = $mysqli->prepare($sql);
 
     if ($stmt) {

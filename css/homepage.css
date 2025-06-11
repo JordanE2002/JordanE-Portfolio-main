@@ -29,6 +29,7 @@ section {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  filter: brightness(0.8) blur(6px);
 }
 
 /* Text over the image */
@@ -39,7 +40,11 @@ section {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  z-index: 1;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .header h1 {

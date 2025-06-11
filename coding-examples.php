@@ -33,6 +33,11 @@
 </nav>
 
     
+ <!-- Menu Toggle Button -->
+ <div class="menu-toggle">
+    <i class="icon-menu"></i> <!-- Hamburger menu icon -->
+</div>
+
 
     <?php
 
@@ -46,9 +51,9 @@ include("inc/header.php");
 
 
     <!-- Code snippets section -->
-
+ <h1 class="title-centered">Code Snippets</h1>
     <section id="coding-examples">
-    <h1 class="title-centered">Code Snippets</h1>
+   
 
     <div class="code-snippet container">
         <h3>HTML: Nav bar for portfolio</h3>
